@@ -14,7 +14,7 @@ class CartPage(BasePage):
     def get_second_position_quant(self):
         pass
 
-    def 
+#    def
 
 
 
