@@ -1,2 +1,4 @@
-# moodle_ui_test-main-2
+[![Build Status](https://app.travis-ci.com/Gabrieldelamer/Productshop_ui_selenium.svg?branch=master)](https://app.travis-ci.com/Gabrieldelamer/Productshop_ui_selenium)
+
+
  
