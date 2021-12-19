@@ -1,4 +1,4 @@
-import webdriver_manager.utils
+import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -19,6 +19,7 @@ class BasePage:
         click_element = click
         """
         element = self.custom_find_element(locator, wait_time)
+        time.sleep(1)
         element.click()
 
     def d_click_element(self, locator, wait_time=60):

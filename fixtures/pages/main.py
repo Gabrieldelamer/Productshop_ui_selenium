@@ -4,6 +4,7 @@ from fixtures.locators.main import MainLocators
 from fixtures.models.main import Product
 from fixtures.pages.base_page import BasePage
 
+
 logger = logging.getLogger("moodle")
 
 
