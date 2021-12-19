@@ -29,14 +29,13 @@ def pytest_addoption(parser):
 def app(request):
     url = request.config.getoption("--url")
     headless = request.config.getoption("--headless")
-
-    # Опции  драйвера
     chrome_options = Options()
     if headless == "false":
         chrome_options.headless = False
     else:
         chrome_options.headless = True
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    driver.set_window_size(1920, 1080)
     logger.info(f"Start app on {url}")
     app = Application(driver, url)
     yield app
