@@ -5,10 +5,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from fixtures.pages.application import Application
-from webdriver_auto_update import check_driver
 logger = logging.getLogger("moodle")
 
-check_driver()
+
 def pytest_addoption(parser):
     parser.addoption(
         "--url",
