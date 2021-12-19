@@ -20,6 +20,7 @@ class BasePage:
         """
         element = self.custom_find_element(locator, wait_time)
         element.click()
+
     def d_click_element(self, locator, wait_time=60):
         """
         click_element = click
@@ -41,7 +42,6 @@ class BasePage:
         element = self.custom_find_element(locator, wait_time)
         return element.text
 
-
     def get_inner_text(self, locator, wait_time=60) -> str:
         """
         Get element text
@@ -49,3 +49,20 @@ class BasePage:
         element = self.custom_find_element(locator, wait_time)
         return element.get_attribute('innerText')
 
+    def string_word_extractor(self, word_number: int, string: str) -> str:
+        position_list: list = string.split(" ")
+        it_title = iter(position_list)
+        index_list: list = []
+        for i in range(1, len(position_list)):
+            index_list.append(i)
+
+        title_words = dict(zip(index_list, it_title))
+        title = title_words[word_number]
+        return title
+
+    def int_str_extrator(self, string: str):
+        num = ""
+        for c in string:
+            if c.isdigit():
+                num = int(num + c)
+        return num

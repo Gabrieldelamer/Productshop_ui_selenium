@@ -10,11 +10,16 @@ class CartLocators:
     TOTAL_PRICE_FIRST_POSITION = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]/i[2]')
     TOTAL_PRICE_SECOND_POSITION = (By.XPATH, '//*[@id="root"]/div/main/ui/li[3]/i[2]')
     TOTAL_PRICE = (By.XPATH, '//*[@id="root"]/div/main/ui/li[4]')
+    TOTAL_PRICE_REMOVED = (By.XPATH, '//*[@id="root"]/div/main/ui/li[3]')
     DELETE_FIRST_ITEM = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]/span/i')
     DELETE_SECOND_ITEM = (By.XPATH, '//*[@id="root"]/div/main/ui/li[3]/span/i')
     ADD_FIRST_POSITION_QUANT = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]/i[2]')
-    REMOVE_FIRST_POSISTION_QUANT = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]/i[1]')
-    BY_BUTTON = (By.XPATH, '//*[@id="root"]/div/main/ui/li[5]/button')
+    ADD_SECOND_POSITION_QUANT = (By.XPATH, '//*[@id="root"]/div/main/ui/li[3]/i[2]')
+    DOWN_FIRST_POSISTION_QUANT = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]/i[1]')
+    DOWN_SECOND_POSISTION_QUANT = (By.XPATH, '//*[@id="root"]/div/main/ui/li[3]/i[1]')
+    BUY_BUTTON = (By.XPATH, '//*[@id="root"]/div/main/ui/li[4]/button')
+    CART_IS_EMPTY = (By.XPATH, '//*[@id="root"]/div/main/ui/li[2]')
+    PAY_DONE_MESSAGE = (By.XPATH, '//*[@id="toast-container"]/div')
     CLOSE_CART = (By.XPATH, '//*[@id="root"]/div/main/ui/i')
 
 

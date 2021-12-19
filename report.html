@@ -3,193 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>Test Report</title>
-    <style>body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  /* do not increase min-width as some may use split screens */
-  min-width: 800px;
-  color: #999;
-}
-
-h1 {
-  font-size: 24px;
-  color: black;
-}
-
-h2 {
-  font-size: 16px;
-  color: black;
-}
-
-p {
-  color: black;
-}
-
-a {
-  color: #999;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/******************************
- * SUMMARY INFORMATION
- ******************************/
-#environment td {
-  padding: 5px;
-  border: 1px solid #E6E6E6;
-}
-#environment tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-/******************************
- * TEST RESULT COLORS
- ******************************/
-span.passed,
-.passed .col-result {
-  color: green;
-}
-
-span.skipped,
-span.xfailed,
-span.rerun,
-.skipped .col-result,
-.xfailed .col-result,
-.rerun .col-result {
-  color: orange;
-}
-
-span.error,
-span.failed,
-span.xpassed,
-.error .col-result,
-.failed .col-result,
-.xpassed .col-result {
-  color: red;
-}
-
-/******************************
- * RESULTS TABLE
- *
- * 1. Table Layout
- * 2. Extra
- * 3. Sorting items
- *
- ******************************/
-/*------------------
- * 1. Table Layout
- *------------------*/
-#results-table {
-  border: 1px solid #e6e6e6;
-  color: #999;
-  font-size: 12px;
-  width: 100%;
-}
-#results-table th,
-#results-table td {
-  padding: 5px;
-  border: 1px solid #E6E6E6;
-  text-align: left;
-}
-#results-table th {
-  font-weight: bold;
-}
-
-/*------------------
- * 2. Extra
- *------------------*/
-.log {
-  background-color: #e6e6e6;
-  border: 1px solid #e6e6e6;
-  color: black;
-  display: block;
-  font-family: "Courier New", Courier, monospace;
-  height: 230px;
-  overflow-y: scroll;
-  padding: 5px;
-  white-space: pre-wrap;
-}
-.log:only-child {
-  height: inherit;
-}
-
-div.image {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin-left: 5px;
-  overflow: hidden;
-  width: 320px;
-}
-div.image img {
-  width: 320px;
-}
-
-div.video {
-  border: 1px solid #e6e6e6;
-  float: right;
-  height: 240px;
-  margin-left: 5px;
-  overflow: hidden;
-  width: 320px;
-}
-div.video video {
-  overflow: hidden;
-  width: 320px;
-  height: 240px;
-}
-
-.collapsed {
-  display: none;
-}
-
-.expander::after {
-  content: " (show details)";
-  color: #BBB;
-  font-style: italic;
-  cursor: pointer;
-}
-
-.collapser::after {
-  content: " (hide details)";
-  color: #BBB;
-  font-style: italic;
-  cursor: pointer;
-}
-
-/*------------------
- * 3. Sorting items
- *------------------*/
-.sortable {
-  cursor: pointer;
-}
-
-.sort-icon {
-  font-size: 0px;
-  float: left;
-  margin-right: 5px;
-  margin-top: 5px;
-  /*triangle*/
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-}
-.inactive .sort-icon {
-  /*finish triangle*/
-  border-top: 8px solid #E6E6E6;
-}
-.asc.active .sort-icon {
-  /*finish triangle*/
-  border-bottom: 8px solid #999;
-}
-.desc.active .sort-icon {
-  /*finish triangle*/
-  border-top: 8px solid #999;
-}
-</style></head>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
   <body onLoad="init()">
     <script>/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -429,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 25-Nov-2021 at 19:41:56 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 17-Dec-2021 at 04:50:04 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -437,16 +251,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "6.2.5"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>macOS-11.6.1-x86_64-i386-64bit</td></tr>
+        <td>macOS-10.15.7-x86_64-i386-64bit</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"Faker": "9.8.3", "allure-pytest": "2.9.45", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
+        <td>{"Faker": "9.8.2", "allure-pytest": "2.9.45", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.9.9</td></tr></table>
+        <td>3.9.7</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 19.94 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>8 tests ran in 52.73 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -457,32 +271,11 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/login/test_login.py::TestLogin::test_login_with_valid_data</td>
-          <td class="col-duration">5.79</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_login.TestLogin object at 0x108020c70&gt;, app = &lt;fixtures.pages.application.Application object at 0x1080e5970&gt;, user_data = &lt;fixtures.models.login.LoginData object at 0x10801aca0&gt;<br/><br/>    def test_login_with_valid_data(self, app, user_data):<br/>        &quot;&quot;&quot;<br/>        Steps:<br/>        1. Open login page<br/>        2. Auth with valid data<br/>        3. Check result<br/>        &quot;&quot;&quot;<br/>        app.open_login_page()<br/>        app.login.auth(data=user_data, is_submit=True)<br/>&gt;       assert 1 == 2  # TODO add assert<br/><span class="error">E       assert 1 == 2</span><br/><span class="error">E         +1</span><br/><span class="error">E         -2</span><br/><br/>tests/login/test_login.py:16: AssertionError<br/> -----------------------------Captured stderr setup------------------------------ <br/>
-
-====== WebDriver manager ======
-Current google-chrome version is 96.0.4664
-Get LATEST chromedriver version for 96.0.4664 google-chrome
-Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-<br/> -------------------------------Captured log setup------------------------------- <br/>2021-11-25 19:41:37 INFO 
-
-2021-11-25 19:41:37 INFO ====== WebDriver manager ======
-2021-11-25 19:41:37 INFO Current google-chrome version is 96.0.4664
-2021-11-25 19:41:37 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
-2021-11-25 19:41:37 INFO Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-2021-11-25 19:41:39 INFO Start app on https://qacoursemoodle.innopolis.university/login/index.php<br/> -------------------------------Captured log call-------------------------------- <br/>2021-11-25 19:41:40 INFO Login with user super_qa_2021 and password Password11!<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/login/test_login.py::TestLogin::test_login_with_invalid_data</td>
-          <td class="col-duration">4.37</td>
+          <td class="col-name">tests/buy/test_buy.py::TestBuy::test_add_to_cart</td>
+          <td class="col-duration">6.83</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -491,19 +284,21 @@ Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chr
 ====== WebDriver manager ======
 Current google-chrome version is 96.0.4664
 Get LATEST chromedriver version for 96.0.4664 google-chrome
-Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-<br/> -------------------------------Captured log setup------------------------------- <br/>2021-11-25 19:41:43 INFO 
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:11 INFO 
 
-2021-11-25 19:41:43 INFO ====== WebDriver manager ======
-2021-11-25 19:41:43 INFO Current google-chrome version is 96.0.4664
-2021-11-25 19:41:43 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
-2021-11-25 19:41:43 INFO Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-2021-11-25 19:41:45 INFO Start app on https://qacoursemoodle.innopolis.university/login/index.php<br/> -------------------------------Captured log call-------------------------------- <br/>2021-11-25 19:41:46 INFO Login with user xfedoseev@example.com and password $zBKA(n6j7<br/></div></td></tr></tbody>
+2021-12-17 04:49:11 INFO ====== WebDriver manager ======
+2021-12-17 04:49:11 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:11 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:11 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:15 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:18 INFO Нажали кнопку Buy
+2021-12-17 04:49:18 INFO Получено сообщение bananas add to cart
+2021-12-17 04:49:18 INFO Название товара bananas<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/login/test_login.py::TestLogin::test_login_with_password[login]</td>
-          <td class="col-duration">4.61</td>
+          <td class="col-name">tests/buy/test_buy.py::TestBuy::test_add_to_cart_two_items</td>
+          <td class="col-duration">5.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -512,19 +307,24 @@ Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chr
 ====== WebDriver manager ======
 Current google-chrome version is 96.0.4664
 Get LATEST chromedriver version for 96.0.4664 google-chrome
-Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-<br/> -------------------------------Captured log setup------------------------------- <br/>2021-11-25 19:41:47 INFO 
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:18 INFO 
 
-2021-11-25 19:41:47 INFO ====== WebDriver manager ======
-2021-11-25 19:41:47 INFO Current google-chrome version is 96.0.4664
-2021-11-25 19:41:47 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
-2021-11-25 19:41:47 INFO Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-2021-11-25 19:41:49 INFO Start app on https://qacoursemoodle.innopolis.university/login/index.php<br/> -------------------------------Captured log call-------------------------------- <br/>2021-11-25 19:41:51 INFO Login with user None and password None<br/></div></td></tr></tbody>
+2021-12-17 04:49:18 INFO ====== WebDriver manager ======
+2021-12-17 04:49:18 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:18 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:18 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:21 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:23 INFO Нажали кнопку Buy
+2021-12-17 04:49:23 INFO Получено сообщение bananas add to cart
+2021-12-17 04:49:23 INFO Название товара bananas
+2021-12-17 04:49:23 INFO Нажали кнопку Buy
+2021-12-17 04:49:23 INFO Получено сообщение apples add to cart
+2021-12-17 04:49:23 INFO Название второго товара apples<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/login/test_login.py::TestLogin::test_login_with_password[password]</td>
-          <td class="col-duration">4.68</td>
+          <td class="col-name">tests/buy/test_buy.py::TestBuy::test_check_item_counter_increasing</td>
+          <td class="col-duration">5.97</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -533,11 +333,130 @@ Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chr
 ====== WebDriver manager ======
 Current google-chrome version is 96.0.4664
 Get LATEST chromedriver version for 96.0.4664 google-chrome
-Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-<br/> -------------------------------Captured log setup------------------------------- <br/>2021-11-25 19:41:52 INFO 
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:24 INFO 
 
-2021-11-25 19:41:52 INFO ====== WebDriver manager ======
-2021-11-25 19:41:52 INFO Current google-chrome version is 96.0.4664
-2021-11-25 19:41:52 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
-2021-11-25 19:41:52 INFO Driver [/Users/alexanderlozovoy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
-2021-11-25 19:41:54 INFO Start app on https://qacoursemoodle.innopolis.university/login/index.php<br/> -------------------------------Captured log call-------------------------------- <br/>2021-11-25 19:41:55 INFO Login with user selivan_21@example.com and password None<br/></div></td></tr></tbody></table></body></html>
+2021-12-17 04:49:24 INFO ====== WebDriver manager ======
+2021-12-17 04:49:24 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:24 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:24 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:26 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:29 INFO Нажали кнопку Buy
+2021-12-17 04:49:29 INFO Значение счетчика 1
+2021-12-17 04:49:29 INFO Нажали кнопку Buy
+2021-12-17 04:49:29 INFO Значение счетчика 2<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/buy/test_buy.py::TestBuy::test_check_item_counter_duplicate</td>
+          <td class="col-duration">6.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 96.0.4664
+Get LATEST chromedriver version for 96.0.4664 google-chrome
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:30 INFO 
+
+2021-12-17 04:49:30 INFO ====== WebDriver manager ======
+2021-12-17 04:49:30 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:30 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:30 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:33 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:35 INFO Нажали кнопку Buy
+2021-12-17 04:49:36 INFO Значение счетчика 1
+2021-12-17 04:49:36 INFO Нажали кнопку Buy
+2021-12-17 04:49:36 INFO Значение счетчика 1<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/search/test_search.py::TestSearch::test_prp_ata</td>
+          <td class="col-duration">8.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 96.0.4664
+Get LATEST chromedriver version for 96.0.4664 google-chrome
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:36 INFO 
+
+2021-12-17 04:49:36 INFO ====== WebDriver manager ======
+2021-12-17 04:49:36 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:36 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:36 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:39 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:42 INFO Нажали кнопку Search
+2021-12-17 04:49:42 INFO Вызвали подготовку данных
+2021-12-17 04:49:44 INFO Название товара bananas<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/search/test_search.py::TestSearch::test_valid_item</td>
+          <td class="col-duration">5.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 96.0.4664
+Get LATEST chromedriver version for 96.0.4664 google-chrome
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:44 INFO 
+
+2021-12-17 04:49:44 INFO ====== WebDriver manager ======
+2021-12-17 04:49:44 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:44 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:44 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:47 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:50 INFO Название товара bananas
+2021-12-17 04:49:50 INFO Ввели в строку поиса значение bananas
+2021-12-17 04:49:50 INFO Нажали кнопку Search
+2021-12-17 04:49:50 INFO Название товара bananas<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/search/test_search.py::TestSearch::test_invalid_item</td>
+          <td class="col-duration">6.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 96.0.4664
+Get LATEST chromedriver version for 96.0.4664 google-chrome
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:50 INFO 
+
+2021-12-17 04:49:50 INFO ====== WebDriver manager ======
+2021-12-17 04:49:50 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:50 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:50 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:49:53 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:49:56 INFO Ввели в строку поиса значение something wrong
+2021-12-17 04:49:56 INFO Нажали кнопку Search
+2021-12-17 04:49:56 INFO Найдена строка Nothing here, see github<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/search/test_search.py::TestSearch::test_empty_item</td>
+          <td class="col-duration">7.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 96.0.4664
+Get LATEST chromedriver version for 96.0.4664 google-chrome
+Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>2021-12-17 04:49:56 INFO 
+
+2021-12-17 04:49:56 INFO ====== WebDriver manager ======
+2021-12-17 04:49:57 INFO Current google-chrome version is 96.0.4664
+2021-12-17 04:49:57 INFO Get LATEST chromedriver version for 96.0.4664 google-chrome
+2021-12-17 04:49:57 INFO Driver [/Users/MainFrame/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+2021-12-17 04:50:00 INFO Start app on https://berpress.github.io/online-grocery-store/<br/> -------------------------------Captured log call-------------------------------- <br/>2021-12-17 04:50:03 INFO Нажали кнопку Search
+2021-12-17 04:50:03 INFO Найдена строка Nothing here, see github<br/></div></td></tr></tbody></table></body></html>

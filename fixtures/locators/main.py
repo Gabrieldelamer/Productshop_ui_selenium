@@ -13,3 +13,5 @@ class MainLocators:
     NEGATIVE_SEARCH_RESULT = (By.XPATH, '//*[@id="root"]/div/main/div[3]/h3')
     MESSAGE = (By.XPATH, '//*[@id="toast-container"]/div')
     COUNTER_CART = (By.XPATH,'//*[@id="root"]/div/main/div[2]/span')
+    ITEM1_PRICE = (By.XPATH, '//*[@id="root"]/div/main/div[3]/div[1]/div[3]/span')
+    ITEM2_PRICE = (By.XPATH, '//*[@id="root"]/div/main/div[3]/div[2]/div[3]/span')

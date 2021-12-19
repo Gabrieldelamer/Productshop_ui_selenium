@@ -74,3 +74,14 @@ class MainPage(BasePage):
         logger.info(f"Значение счетчика {counter}")
         count: int = int(counter)
         return count
+
+    def get_position_price(self, pos_number: int) -> int:
+        if pos_number == 1:
+            pos_price_str: str = self.get_text(MainLocators.ITEM1_PRICE)
+        else:
+            pos_price_str: str = self.get_text(MainLocators.ITEM2_PRICE)
+
+        price = int(self.string_word_extractor(1, pos_price_str))
+        logger.info(f"Итоговая цена позиции №{pos_number} равна {price}")
+        return price
+
