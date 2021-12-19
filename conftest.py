@@ -42,39 +42,3 @@ def app(request):
     yield app
     app.quit()
 
-"""
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    pytest_html = item.config.pluginmanager.getplugin("html")
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, "extra", [])
-    if report.when == "call":
-        # always add url to report
-        extra.append(pytest_html.extras.url("http://www.example.com/"))
-        xfail = hasattr(report, "wasxfail")
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            # only add additional html on failure
-            extra.append(pytest_html.extras.html("<div>Additional HTML</div>"))
-        report.extra = extra
-
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item):
-    outcome = yield
-    rep = outcome.get_result()
-    if rep.when == "call" and rep.failed:
-        try:
-            if "app" in item.fixturenames:
-                web_driver = item.funcargs["app"]
-            else:
-                logger.error("Fail to take screen-shot")
-                return
-            logger.info("Screen-shot done")
-            allure.attach(
-                web_driver.driver.get_screenshot_as_png(),
-                name="screenshot",
-                attachment_type=allure.attachment_type.PNG,
-            )
-        except Exception as e:
-            logger.error("Fail to take screen-shot: {}".format(e))
-"""

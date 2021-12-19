@@ -12,4 +12,4 @@ install:
 
 script:
 #  - pre-commit run --all-files
-  - pytest --headless='true'
+  - pytest --headless='false'
